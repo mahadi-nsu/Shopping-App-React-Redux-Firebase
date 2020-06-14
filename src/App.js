@@ -4,7 +4,12 @@ import './App.css';
 // import HomePage from './pages/homepage/homepage.component';
 import { Route } from 'react-router-dom';
 
-const HomePage = props => {
+const HomePage = (props) => {
+  // console.log(props);
+  // console.log(history);
+  console.log(props.match);
+  console.log(props.history);
+  console.log(props.location);
   console.log(props);
   return (
     <div>
@@ -31,7 +36,7 @@ const TopicDetails = props => {
   return (
     <div>
       <h1>
-        Topic Details  Page
+        Topic Details  Page : {props.match.params.topicId}
       </h1>
     </div>
   )
@@ -41,7 +46,7 @@ const TopicDetails = props => {
 function App() {
   return (
     <div>
-      <Route exact path='/' component={HomePage} />
+      <Route path='/' component={HomePage} />
       <Route exact path='/topics' component={TopicList} />
       <Route path='/topics/:topicId' component={TopicDetails} />
     </div>
