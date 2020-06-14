@@ -4,10 +4,16 @@ import React from 'react';
 import './homepage.styles.scss';
 import Directory from '../../components/directory/directory.component';
 
-const HomePage = () => (
-    <div className="homepage">
-        <Directory />
-    </div>
-)
-
+const HomePage = ({ history }) => {
+    console.log(history);
+    console.log("Mahadi");
+    return (
+        // console.log("mahadi")
+        <div className="homepage">
+            {/* console.log(props);
+            console.log("Mahadi"); */}
+            <Directory />
+        </div>
+    )
+}
 export default HomePage;

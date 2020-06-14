@@ -5,7 +5,9 @@ import MenuItem from '../menu-item/menu-item.component';
 import './directory.styles.scss';
 
 class Directory extends React.Component {
-  constructor() {
+  constructor({ history }) {
+    console.log("Tahsin");
+    console.log(history);
     super();
 
     this.state = {
